@@ -1,33 +1,40 @@
 $(document).ready(function() {
-  $("form#date").submit(function(event) {
-    var age = parseInt($("input#age").val());
-    var gender = $("select#gender").val();
-    var phone = $("select#phone").val();
+  $("form#triangle").submit(function(event) {
+    var aye = parseInt($("input#aye").val());
+    var bee = parseInt($("input#bee").val());
+    var see = parseInt($("input#see").val());
 
-    if (age >= 1 && age <=40 && gender === 'female' && phone === "apple") {
-      $("#celeb").empty().append("Ben Affleck");
-      $("#bae").show();
-    } else if (age >= 40 && gender === 'female' && phone === "apple") {
-      $("#celeb").empty().append("John Legend");
-      $("#bae").show();
-    } else if (age >= 1 && age <=40 && gender === 'female' && phone === "android") {
-      $("#celeb").empty().append("Sting");
-      $("#bae").show();
-    } else if (age >= 40 && gender === 'female' && phone === "android") {
-      $("#celeb").empty().append("Denzel Washington");
-      $("#bae").show();
-    } else if (age >= 1 && age <=40 && gender === 'male' && phone === "apple") {
-      $("#celeb").empty().append("Taylor Swift");
-      $("#bae").show();
-    } else if (age >= 40 && gender === 'male' && phone === "apple") {
-      $("#celeb").empty().append("Madonna");
-      $("#bae").show();
-    } else if (age >= 1 && age <=40 && gender === 'male' && phone === "android") {
-      $("#celeb").empty().append("Rihanna");
-      $("#bae").show();
-    } else if (age >= 40 && gender === 'male' && phone === "android") {
-      $("#celeb").empty().append("Jennifer Lopez");
-      $("#bae").show();
+    if (aye === bee && bee ===see) {
+    $("#angle").empty().append("an equilateral triangle");
+    $("#quote").show();
+    }
+    if (aye === bee && bee !== see && aye !== see) {
+    $("#angle").empty().append("an isosceles triangle");
+    $("#quote").show();
+    }
+    if (aye === see && bee !== see && aye !== bee) {
+    $("#angle").empty().append("an isosceles triangle");
+    $("#quote").show();
+    }
+    if (see === bee && aye !== see && aye !== bee) {
+    $("#angle").empty().append("an isosceles triangle");
+    $("#quote").show();
+    }
+    if (aye !== bee && bee !==see) {
+    $("#angle").empty().append("a scalene triangle");
+    $("#quote").show();
+    }
+    if (aye + bee <= see) {
+    $("#angle").empty().append("something, but it isn't a triangle. Try it again :)");
+    $("#quote").show();
+    }
+    if (aye + see <= bee) {
+    $("#angle").empty().append("something, but it isn't a triangle. Try it again :)");
+    $("#quote").show();
+    }
+    if (see + bee <= aye) {
+    $("#angle").empty().append("something, but it isn't a triangle. Try it again :)");
+    $("#quote").show();
     }
     event.preventDefault();
   });

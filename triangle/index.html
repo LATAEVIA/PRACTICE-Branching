@@ -5,41 +5,43 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-1.12.2.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Celebrity Dating</title>
+    <title>Triangle Tracker</title>
   </head>
   <body>
      <div class="container">
-       <h1>Celebrity Dating</h1>
+       <h1>Triangle Tracker</h1>
 
-       <p>To pair you with a celebrity, we need to know a little about you:</p>
+       <p>Build an equilateral, isosceles, or scalene triangle! Enter a length for each side:</p>
 
-       <form id="date">
+       <form id="triangle">
          <div class="form-group">
-           <label for="age">Age</label>
-           <input type="text" class="form-control" id="age" placeholder="Age">
+           <label for="aye">Side A</label>
+           <input type="text" class="form-control" id="aye" placeholder="Side A">
          </div>
          <div class="form-group">
-           <label for="gender">Gender</label>
-           <select id="gender">
-             <option value="female">Female</option>
-             <option value="male">Male</option>
-           </select>
+           <label for="bee">Side B</label>
+           <input type="text" class="form-control" id="bee" placeholder="Side B">
          </div>
          <div class="form-group">
-           <label for="phone">Phone OS</label>
-           <select id="phone">
-             <option value="apple">iPhone</option>
-             <option value="android">Android</option>
-           </select>
-           <p class="help-block">Sorry your obscure/deprecated OS isn't listed.</p>
+           <label for="see">Side C</label>
+           <input type="text" class="form-control" id="see" placeholder="Side C">
          </div>
 
-         <button type="submit" class="btn">Find my Celebrity</button>
+         <p class="help-block">
+           Note:<br>
+           equilateral: all sides are equal;<br>
+           isosceles: exactly 2 sides are equal;<br>
+           scalene: no sides are equal;<br>
+           NOT a triangle: the sum of the lengths of any two sides of a triangle is less than or equal to the length of the third side.
+         </p>
+         <button type="submit" class="btn">Identify my Triangle</button>
        </form>
 
-       <div id="bae">
-         <p>You'll have a bright future with <span id="celeb"></span>.</p>
-       </div>
-     </div>
-   </body>
+
+        <div id="quote">
+         <p>You've built <span id="angle"></span>.</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
